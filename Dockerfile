@@ -8,10 +8,9 @@
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-
+FROM golang:onbuild
 ENV http_proxy http://10.144.1.10:8080
 ENV https_proxy http://10.144.1.10:8080
-FROM golang:onbuild
 EXPOSE 8080
 #RUN go install github.com/golang/example/outyet
 
